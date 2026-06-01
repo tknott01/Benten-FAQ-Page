@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benten Region Guide | Prosperous Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --sidebar-bg: #1f2833;
+            --text-color: #c5c6c7;
+            --accent-color: #66fcf1;
+            --accent-hover: #45a29e;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-hover);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h2 { margin-top: 40px; font-size: 1.8rem; }
+        h3 { margin-top: 30px; font-size: 1.3rem; color: #fff; }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+            text-shadow: 0 0 8px var(--accent-color);
+        }
+
+        p { margin-bottom: 20px; font-weight: 300; }
+
+        /* --- Layout --- */
+        .sidebar {
+            width: 300px;
+            background-color: var(--sidebar-bg);
+            padding: 20px 0;
+            box-shadow: 2px 0 15px rgba(0,0,0,0.8);
+            overflow-y: auto;
+            border-right: 1px solid var(--accent-hover);
+        }
+
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid var(--accent-hover);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li { padding: 5px 20px; }
+
+        .nav-links a {
+            display: block;
+            padding: 8px 10px;
+            border-left: 3px solid transparent;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            border-left: 3px solid var(--accent-color);
+            background-color: rgba(102, 252, 241, 0.05);
+        }
+
+        .nav-links .sub-link a {
+            padding-left: 25px;
+            font-size: 0.8rem;
+            color: #999;
+            font-family: 'Roboto', sans-serif;
+            text-transform: none;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 50px 80px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* Subtle glowing background effect */
+        .content::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102,252,241,0.03) 0%, transparent 60%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .section-block {
+            margin-bottom: 60px;
+            background: rgba(31, 40, 51, 0.4);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(102, 252, 241, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-hover); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
+
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Benten Guide</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#introduction">Introduction</a></li>
+            <li class="sub-link"><a href="#welcome">Welcome to Benten!</a></li>
+            <li class="sub-link"><a href="#discord">Join Our Discord!</a></li>
+            <li class="sub-link"><a href="#who-for">Who is this guide for?</a></li>
+            <li class="sub-link"><a href="#tutorial">In Game Tutorial</a></li>
+            <li class="sub-link"><a href="#what-is-benten">What even is Benten?</a></li>
+            <li class="sub-link"><a href="#acronyms">Community Acronyms</a></li>
+
+            <li><a href="#steps-after-tutorial">Steps After Tutorial</a></li>
+            <li class="sub-link"><a href="#what-is-important">What is Important</a></li>
+            <li class="sub-link"><a href="#inputs">Getting Input Materials</a></li>
+            <li class="sub-link"><a href="#supplies">Worker Supplies</a></li>
+            <li class="sub-link"><a href="#self-sustaining">Self Sustaining?</a></li>
+            <li class="sub-link"><a href="#outputs">Using Output Materials</a></li>
+            <li class="sub-link"><a href="#licenses">License Types</a></li>
+            <li class="sub-link"><a href="#ships">Ship Speeds</a></li>
+
+            <li><a href="#expanding-empire">Expanding Your Empire</a></li>
+            <li class="sub-link"><a href="#producing">What to Produce?</a></li>
+            <li class="sub-link"><a href="#experts">What about experts?</a></li>
+            <li class="sub-link"><a href="#planets">Planet Breakdown</a></li>
+            
+            <li><a href="#expanding-planets">Expanding to More Planets</a></li>
+            <li class="sub-link"><a href="#permits">Permits</a></li>
+            <li class="sub-link"><a href="#habitability">Habitability</a></li>
+            <li class="sub-link"><a href="#distance">Distance to CX</a></li>
+            <li class="sub-link"><a href="#population">Population</a></li>
+
+            <li><a href="#external-tools">External Community Tools</a></li>
+            <li class="sub-link"><a href="#taiyi-map">Taiyi’s Universe Map</a></li>
+            <li class="sub-link"><a href="#raylu-roi">Raylu’s ROI tool</a></li>
+            <li class="sub-link"><a href="#refined-prun">Refined PrUn</a></li>
+            <li class="sub-link"><a href="#prune-planner">PrUn Planner</a></li>
+
+            <li><a href="#benten-programs">Benten Economic Programs</a></li>
+            <li class="sub-link"><a href="#best-grant">BEST Grant</a></li>
+            <li class="sub-link"><a href="#isbd-loan">ISDB Loan</a></li>
+            <li class="sub-link"><a href="#beu-ship">Starter Ship Upgrade</a></li>
+            <li class="sub-link"><a href="#singren-grant">Singren Grant</a></li>
+            <li class="sub-link"><a href="#cadia-grant">Cadia Grant</a></li>
+            <li class="sub-link"><a href="#cx-grants">Rolling CX Grants</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+
+        <section id="introduction" class="section-block">
+            <h1>Introduction</h1>
+            
+            <h3 id="welcome">Welcome to Benten!</h3>
+            <p>Welcome to Benten, and if you haven’t heard it yet, Prosperous Universe in general! Here in the Benten Region we are committed to fostering the next generation of entrepreneurs and industrialists, and we are proud to present this guide to help lead you through the start of your journey to untold fortune.</p>
+            
+            <h3 id="discord">Join Our Discord!</h3>
+            <p>If you haven’t already, please consider joining the Benten Economic Union Discord: <a href="https://discord.gg/Semyy5EB" target="_blank">https://discord.gg/Semyy5EB</a>! The server is very active and welcoming, and is an incredible bonus to game enjoyment, as well as a great place to find deals and information to make more money.</p>
+            
+            <h3 id="who-for">Who is this guide for?</h3>
+            <p>While this guide is being commissioned for Benten Space in particular, and is mainly focused from the perspective on Benten space, it has massive overlap with the game in general and is open to anyone who finds it helpful.</p>
+            
+            <h3 id="tutorial">In Game Tutorial</h3>
+            <p>If you are here, you are likely looking for information about getting started in the game. If you haven’t yet, it is highly recommended you complete the starting tutorials; they can be accessed either by clicking the HELP tab in the top right, or by opening a new buffer in the bottom left and entering the command HELP. This guide will assume you have complete the first 8 of those tutorials, so please complete them before proceeding, thanks!</p>
+            
+            <h3 id="what-is-benten">What even is Benten?</h3>
+            <p>Benten Space is the loosely defined region of star systems close to the Benten exchange located at Benten Station; there is no official border for where Benten space ends, however the relevant star systems are any whose products are sold at said Benten exchange. Technically a system on the other end of the galaxy could be loosely considered aligned with Benten, however nobody is foolish enough to ship to Benten from there.</p>
+            
+            <h3 id="acronyms">Community Acronyms</h3>
+            <p>One more thing to know up front; you will quickly notice within both the Benten community, and the broader Prosperous Universe community, is the use of 3-5 letter acronyms. These acronyms are used heavily within the command system of the game, and have expanded from there to become in large part a dialect the community uses in general. Said acronyms will be used within this guide, with explanations for what they are, but if you ever forget, a master dictionary of all the terms can be found at the bottom of the link tree.</p>
+        </section>
+
+        <section id="steps-after-tutorial" class="section-block">
+            <h1>Steps to Continue With After the Tutorial</h1>
+            
+            <h3 id="what-is-important">What is Important</h3>
+            <p>Next, we will go over more basic information new players often have when first getting established. Almost all of this is useful no matter where in the universe you start, but it’s crucial to beginning your journey. Some of this might seem redundant or obvious, but if it’s here, people have asked.</p>
+            
+            <h3 id="inputs">Getting Input Materials</h3>
+            <p>As you begin your first production, an immediately present question is what is the best way to get the required input materials? Should you EXT (extract, such as mining, gas harvesting, etc) or AGRI (agriculture, farming and the like) them locally, or should you ship them in from the CX (the exchange, benten station)? The answer is this is very much up to you! Generally speaking the tradeoff between the options is as follows: if you import your inputs you will have a higher profit margin, and if you produce them locally, you will have to do less shipping. We will dive into the exact nuance of this in more detail later.</p>
+            
+            <h3 id="supplies">What about supplies for my workers?</h3>
+            <p>It is very tempting to try and grow your own food locally so that way you don’t need to ship it in; this is generally speaking a very bad idea though. Unless your planet is specifically specially suited for food production, it is incredibly inefficient to grow food, and you will be far more profitable if you buy the food from someone else who IS producing it on a food oriented planet. The same goes for basically all the other consumables your workers will need.</p>
+            
+            <h3 id="self-sustaining">Can you be entirely self sustaining?</h3>
+            <p>Many players want to be entirely self sustaining; this is theoretically possible, and if you find it enjoyable, then go for it. That being said, it is very difficult, and very slow, and you will likely be surprised by the number of small obtuse inputs you will need to make yourself. The game is balanced around trade and specialization and trying to be entirely self supplied is very hard. That being said, if you enjoy it, the game is here to be fun, not a job, so go for it!</p>
+            
+            <h3 id="outputs">Using Your Output Materials</h3>
+            <p>Next players often wonder what they should do with their outputs. Generally speaking, you want to sell them at the CX. There are some options to sell them on the LM (local market, a place where players can advertise buy, sell, and shipment contracts), however when starting it is not usually very viable to take advantage of these opportunities. Additionally FREE accounts cannot use the LM or any other contracts. What does a FREE account mean? I'm glad you asked, it's the next topic.</p>
+            
+            <h3 id="licenses">What are the License Types?</h3>
+            <p>There are 3 levels of License you can have in the game, which control which in game activities you can do. There is FREE, PRO, and BASIC; everyone starts with a free account, and you can pay for a subscription to PRO. Once your subscription to PRO ends, you downgrade to a BASIC account. The crucial difference between these is PRO and BASIC accounts can make contracts between players outside of the official commodity exchange trades. This is done so that players do not abuse starting resources from multiple accounts, and if they want to take advantage of new accounts, they at least need to put some irl money in the game (it's still against the rules to have multiple accounts though).</p>
+            
+            <h3 id="ships">How fast should I set ships to go?</h3>
+            <p>This is another common question, with an answer that is both very complicated and very simple. Generally speaking, you want to ship as slow as you can without wasting time; this could be because of needing to get new supplies to your base so production can continue, or to free up your ship to ship something else to a different base. Ships are VERY expensive, so oftentimes it makes more sense to spend more on fuel and use less ships, then it does to buy more ships. Additionally, getting your product to market quicker can mean being able to build more and increase production quicker; don’t forget the opportunity cost of your products just sitting there! Getting the balance of how much fuel you need to burn can seem very daunting, and most established players follow a simple rule of thumb: set the FTL (faster than light fuel, the fuel used to jump between star systems) slider to absolute minimum, and set the STL (slower than light fuel, the fuel used to fly between locations within systems) to a level where burning 1 additional STL would save you 1 minute of travel time. Otherwise, set the slider so that your shipment will arrive when you plan to play next; there is no reason to waste money to have your ship arrive early and sit in its dock while you sleep.</p>
+        </section>
+
+        <section id="expanding-empire" class="section-block">
+            <h1>Expanding Your Empire</h1>
+            
+            <h3>Some Beginning Considerations</h3>
+            <p>Once you have your production line running smoothly, you will likely want to start re-investing your profits into more production; this is what will be covered in this section of the guide! It is important to note though, this guide is being written from the perspective of what is OPTIMAL; if at any point you find yourself thinking “that's great but I want to do X”, then I highly encourage doing it instead! I will lay out what to do for absolute min/maxing, but the degree to which you want to follow said suggestions and squeeze the blood of profit from the stone of industry is entirely up to you.</p>
+            
+            <h3 id="producing">What should I be producing?</h3>
+            <p>Great question! That's the point of the game, if it was too simple it wouldn’t be any fun. At a beginning level though, there are three main considerations for what you want to produce. Firstly, there is profit; you might be the greatest hat maker for birds in the world but if nobody wants bird hats you're out of luck. Profit can be calculated by hand, or much more effectively using external tools created by the community, which you can find in the tools section.</p>
+            <p>Next is your planet's COGC (council of global commerce, where the planet's local government decides policies; this acronym is typically used to refer specifically to the policy determining the planet's production boost). A planet's COGC determines which kind of production (ie AGRI, EXT, etc) is boosted. Whichever production that is will run 25% faster on said planet. When you hear players refer to a “AGRI Planet” or a “MFG Planet” (manufacturing, production of consumable goods and other materials) this is what they are talking about. Generally speaking it is a great idea to align your production with what your planet's COGC is set to.</p>
+            <p>Finally, there is the planet's inherent resources. Certain products can only be made on planets with those resources available, such as EXTing HAL (halogen minerals, a base mineral used in massive quantities by the economy) on a planet with HAL available, while other products like H2O (water, needed for a massive number of things, duh) CAN be produced in lots of locations but are only profitable to be produced on certain planets.</p>
+            <p>By combining these considerations, you can identify what is a good vs what is a bad product to make on your planet.</p>
+            
+            <h3 id="experts">But what about experts?!?!?!</h3>
+            <p>Experts are important, but generally speaking, in the timescale of the game they arrive quick enough, that they can be treated as being quickly maxed out, and leaving them behind in a production pivot is relatively minor.</p>
+            
+            <h3 id="planets">That's great, but what about MY planet???</h3>
+            <p>Here are some general pointers about each of the planets you can start on in Benten Space, based on their local resources and COGC. One crucial thing to keep in mind is you can swap starting planets if you want; you can always COLIQ (liquidate your company, starting over from 0) and select a different starting planet or region. This will reset your progress to 0, but might be a good idea if you want to get into an industry which a different planet is much better suited for.</p>
+            
+            <h4>Katoa</h4>
+            <p>Katoa has a COGC of MFG, making it a manufacturing planet. Manufacturing tends to be a very versatile industry and the primary building involved, BMP (basic material plant, the building which makes a massive amount of the base consumables in the game), can pivot between the production of a lot of different outputs, meaning you can quickly switch between different outputs based on what is more or less profitable at any given time, a luxury a lot of other industries do not have. Critically though, as of May 2026 when this guide was written ALL MFG products are very poor profitability in Benten.</p>
+            <p>Separately, Katoa has GAL (Galerite Rock, a mineral that is used in STL production), which makes it possible to produce STL fuel there. Fuel is actively sponsored by the Benten Economic Union, so there is always very stable high volume demand for it, however it is on the low end in terms of profitability, though not at a critically low place like MFG. If you choose to produce fuel on Katoa, there are a few further things to keep in mind; firstly, it is a very poor idea to EXT AMN (ammonia, a gas used in fuel production) there. While it is possible, the amount is so small it is very cost ineffective to do so. Separately, it is actually more profitable to buy GAL at the CX and import it for STL production than to mine the GAL yourself locally. There are some LM offers to buy SLF on Katoa, so if you EXT the GAL locally, you need to do almost no shipping at all, however if you choose to ship it to the CX, which is required for FREE accounts and has slightly better profits, bringing GAL back to Katoa will not increase your shipping requirements at all.</p>
+            
+            <h4>Umbra</h4>
+            <p>Umbra has COGC for CHM (chemistry, involves reacting base gasses, liquids, etc into more complicated materials for further use); CHM is both incredibly profitable, and also incredibly high volume, making it a very good way to make money. Otherwise, Umbra does not really have much natural resources to speak of.</p>
+            
+            <h4>Proxion</h4>
+            <p>Proxion has a COGC for AGRI, making it great for farming. AGRI generally has a very high ROI (return on investment, how quickly a production chain will earn back the money needed to construct it, with a higher ROI meaning it earns it back quicker), but very low profit/area, meaning that the total profit you can make on the planet before you run out of space to expand your base will be relatively low. The total trade volume for raw AGRI products is also oftentimes not very high, and can shift rapidly, so most players instead take the products they grow and make them into a more advanced product. This is usually either RAT (basic rations, the base food from which all other foods are made) made in a FP (food processor, makes basic foods), or C (carbon, one of the most critical base materials in the game) made in an INC (incinerator, takes raw AGRI products and makes carbon). Critically, making RAT is NOT boosted by AGRI COGC, it is boosted by FIND (food industry, what it says on the tin); oftentimes players will ship their raw AGRI products to a FIND planet to take advantage of the boost there, though naturally this massively increases the amount of shipping which is required. The nearest FIND planet is Milliways, if a dual planet food setup sounds interesting, though notably it is a fair distance away from Proxion. Similarly, C production is NOT boosted by AGRI and is instead boosted by RES (resource extraction, mining, gas harvesting, incinerating, etc), with the best nearby RES planet being UV-135c, which is considerably closer, but harder to build on.</p>
+            <p>Critically, if you decide to farm on Proxion do NOT extract H2O locally; this is literally the archetypical example which the community uses for bad local resource extraction, with the cost of maintaining RIG (rigs, extract fluids) being more expensive than the water they produce, making the process not just horribly inefficient, but actively detrimental; if you farm on Proxion you should import H2O.</p>
+            
+            <h4>Nemesis</h4>
+            <p>Nemesis has a COGC for AGRI; see Proxion, everything true for it holds true for Nemesis as well. I just happened to write the advice for Proxion before Nemesis.</p>
+            
+            <h4>Gibson</h4>
+            <p>Gibson has a COGC for CONST (construction, makes the parts for buildings and spaceships). Construction tends to be very profitable, but the market for the products can be very illiquid at times, so it is important to make sure what you produce actually has people buying it. Otherwise, Gibson does not really have much in terms of useful natural resources.</p>
+            
+            <h4>Etherwind</h4>
+            <p>Etherwind has a COGC for RES (resource extraction, mining, gas and liquid collection, incineration, etc). This combined with its supermassive amount of water makes it primarily a water production planet. The H2O (water, used for a massive amount of products) can be sold directly, or further processed into DW (drinking water, consumed in massive amounts by workers). Critically though DW production is not boosted by RES, but rather FIND (food industry, the production of food); this means players will often ship the H2O to a FIND planet to increase their profits. If you choose to do this, the best close FIND planet is Sonos Malum. Profits can be even further boosted by making the DW into COF (coffee, also consumed en masse by workers) which is also boosted by FIND.</p>
+
+            <h3>I Want to do Metallurgy/Fuel Refining/Electronics, None of the Planets You Listed Have Those Bonuses!</h3>
+            <p>Sadly, this just means that if you want to work with these industries, you will either have to forgo the 25% COGC boost, or you will need to move off of your starting planet. Expanding to other planets will be covered next, otherwise tanking the 25% hit to output really is not that bad, if you want to build an industry unaligned to a planet's COGC it's not like it will completely destroy your profits.</p>
+
+            <h3>I Started on a Planet Which is Unaligned With the Industry I Want to Get Into, but I Don’t Want to Restart!</h3>
+            <p>Then don’t! It's very possible that you have already made enough profit that re-investing it into more production will be a greater boost than the 25% that restarting on the “correct” planet would give you; COLIQing over to a different planet is heavily in min/max territory.</p>
+
+            <h3>ONE MORE CRUCIAL DETAIL</h3>
+            <p>You might be considering starting on one of these planets, and then making a second base a different one. THIS WILL NOT WORK. All of these planets are very useful for production due to having high habitability levels; this has caused them to be massively settled on and has caused them to become “full”, making it so nobody else can make a new base on these planets. The only way to get a base on them now is to have them be your starting planet. Because of this, it is generally a good idea to not completely abandon your starting planet, even though it will keep one of your permits bound up, simply as they tend to be very useful long term and you will likely wish you had free access to one of them. Pushing this idea to its limit, you can consider COLIQing onto the planet you want to hold onto for long term purposes, but this gets even further into min/max territory.</p>
+        </section>
+
+        <section id="expanding-planets" class="section-block">
+            <h1>Expanding To More Planets</h1>
+
+            <h3>Your Empire Grows</h3>
+            <p>Once you have run out of space on your starting planet (or possibly sooner) you will likely want to start production on another planet - this is what we will cover next.</p>
+
+            <h3 id="permits">Permits</h3>
+            <p>The first thing to know about expanding is permits; your empire starts with 2 permits, and you can gain more permits by upgrading your HQ (headquarters, a building on one of your planets, it can be moved once a month for free), HQ upgrades start very cheap, but then grow in cost exponentially. This means getting a third planet will costs in the range of ten thousand CIS (The Benten Space currency), while your 30th will cost tens of billions. Each planet can have 1, 2 or 3 permits allocated to it; 1 permit gives 500 space to build on, 2 permits gives 750 space to build on and 3 permits gives 1000 space to build on.</p>
+
+            <h3 id="habitability">Habitability</h3>
+            <p>The next thing to think about is the habitability of the planet. There are 4 ways in which a planet can be more or less easily habitable: temperature, pressure, gravity, and surface type. If a planet is too hot or cold, too high or low pressure, or too high or low gravity, additionally building materials are required to build on it. If a planet is gaseous instead of rocky there are further costs to building on it. Typically, the player base refers to a planet's habitability by a number of “stars”; a “3 star planet” is a planet where the temperature, pressure, and gravity are all such that no extra building materials are needed. Nobody seems to mention rocky vs gaseous; don’t ask me why. These habitability costs are very significant though, and must be considered heavily when choosing where to build; a base on a 2 star planet can easily cost 50% more than a base on a 3 star planet! This is why starter planets, which are all 3 stars, are so populated and so valuable.</p>
+
+            <h3 id="distance">Distance to CX</h3>
+            <p>Next, it is critical to consider how far a planet is from the exchange where you want to bring products to. Interestingly, this is often less so because of the fuel costs involved, but rather in the time it takes a ship off the board; due to some semi-complicated economics, ships cost a massive amount, and are often times the limiting factor for production, rather than the production itself; a closer base which takes less shipping but is less efficient might very well be more effective than a base which is more efficient but far away. One further crucial detail are the Gates which were recently added to the game; they allow for much quicker shipping, but only between the directly linked systems, and at a cost of 4k CIS a jump, which adds up very quickly for the small starter ships.</p>
+
+            <h3 id="population">Population</h3>
+            <p>Every production building needs to be staffed by workers, with higher tier production requiring more specialized and expensive workers to run. For pretty much any production that you might run if you are reading this guide you will only need Settlers or Pioneers, and any planet you choose to build on will almost certainly have enough to work your buildings, however it is likely a good idea to double check the free population amounts on a planet before moving there to be safe. Actually increasing worker populations, and population management in general is more advanced and out of the scope of this guide at the moment.</p>
+
+            <h3>Other considerations</h3>
+            <p>There are more considerations to keep in mind, such as the fact that more massive planets require more fuel to get cargo off of, the shipping size of the products you are producing, the opportunity cost of an investment, the fact that planetary orbits means sometimes shipping is super easy and sometimes it is very long, and many other things which are outside of the scope of this section of the guide. Needless to say, there is a lot to potentially consider, but I have covered the most crucial points.</p>
+
+            <h3>Actually choosing a planet</h3>
+            <p>If this all seems overwhelming to think about, that is totally natural, and it's important not to get too bogged down in doing things perfectly optimally. Perfection is the killer of progress. That being said, the other way that this process can be made much more straightforward is through the use of external tools, which have become practically necessary to play the game at this point, which we will go over next!</p>
+        </section>
+
+        <section id="external-tools" class="section-block">
+            <h1>External Community Tools</h1>
+            
+            <h3>Why Use External Tools</h3>
+            <p>It might seem at first that using extra tools makes the game more complicated; I can assure you this is the opposite of the case. The tools I will be showcasing here make the game so much more straightforward to play, without oversimplifying or losing any enjoyability (unless you like highly repetitive guessing and checking, or making your own spreadsheets), that there is a good case to be made that this should have actually have been the second section of the guide not the second to last. Needless to say, they are all still fully optional, and any that get in the way of your enjoyment should be immediately discarded.</p>
+            
+            <h3 id="taiyi-map">Taiyi’s Universe Map</h3>
+            <p>To begin with, if you are searching for planets, try Taiyis Universe Map: <a href="https://universemap.taiyibureau.de/" target="_blank">https://universemap.taiyibureau.de/</a>. Made by our esteemed BEU (Benten Economic Union, the governing body which manages Benten Space) member Taiyi, it allows filtering based on habitability, resources, and COGC, allowing you to skip checking planets 1 at a time for what you are looking for and instantly point out where what you want is! Crucially, make sure to remember which planets are full, so you don’t make a plan around a planet you can’t actually build on, and to consider proximity to Benten.</p>
+            
+            <h3 id="raylu-roi">Raylu’s ROI tool</h3>
+            <p>Next, for all your production consideration needs try Raylu’s ROI tool: <a href="https://prun.raylu.net/roi.html" target="_blank">https://prun.raylu.net/roi.html</a>. Made by the data baron themself, Raylu, it shows what products are worth making. Make sure to select the correct exchange (BEN/CI1) and to turn off low volume!</p>
+            
+            <h3 id="refined-prun">Refined PrUn</h3>
+            <p>Another very important tool to use is Refined PrUn: <a href="https://com.prosperousuniverse.com/t/refined-prun-qol-extension-for-prosperous-universe/6760" target="_blank">Extension Link</a>. Made by the intrepid Razenpok, RefinedPrun is a chrome extension which adds a host of quality of life features to the game. The XIT BURN tool it adds, to give a single example of MANY, allows for a single unified display of all the input requirements for each of your bases, how many days of inputs each base has left, and exactly how much of each material you need to purchase to fully restock your bases.</p>
+            
+            <h3 id="prune-planner">Prun Planner</h3>
+            <p>Finally, the greatest of them all, PrUnPlanner: <a href="https://prunplanner.org/" target="_blank">https://prunplanner.org/</a>. PrUnPlanner lets you simulate theoretical bases, considering their costs/profits/etc before actually building them! Covering everything from visitation frequency to automatically finding the optimal population habitation setup for the production you specify, after using PrUnPlanner at all, trying to play without it feels nigh impossible!</p>
+        </section>
+
+        <section id="benten-programs" class="section-block">
+            <h1>Benten Economic Programs</h1>
+            
+            <h3>The Benten Philosophy</h3>
+            <p>Here in Benten, we believe it is hyper critical to help foster up and coming traders, industrialists, and all manner of newcomers to the region! To enable this, Benten has a number of Grant and Loan opportunities open, and anyone planning on living in Benten space should definitively apply to any and all they think they are suitable for!</p>
+            
+            <h3 id="best-grant">BEST Grant</h3>
+            <p>To begin with, there is the BEST grant; this is a one time grant of 1mil CIS which is offered for any newcomers to the Benten region; the requirements to apply are very minimal, requiring only a PRO or BASIC license (so the grant contract can be accepted), and a plan for how the money will be spent detailed out in PrunPlanner and shared. More information can be found at: <a href="https://discord.com/channels/1362291519012212786/1362409953381454015" target="_blank">Discord Link</a></p>
+            
+            <h3 id="isbd-loan">ISDB Loan</h3>
+            <p>Next, ISDB (Inter Stellar Developemnt Bank, the main bank within Benten Space) Offers loans at incredibly low interest rates; similar to the BEST grant, it requires little more than a PRO or BASIC license and a PrunPlanner Layout for what you will do with it. Given that you can trip in your own shoelaces and make 10% profit weekly, there 1% weekly interest rates are practically free! More information can be found at: <a href="https://discord.com/channels/1362291519012212786/1392677878763880580" target="_blank">Discord Link</a></p>
+            
+            <h3 id="beu-ship">BEU Starter Ship Upgrade Program</h3>
+            <p>Looking to upgrade your starter ship so you aren’t bottlenecked by shipping? Full upgrade kits are available at VERY competitive prices, and with 0% interest financing options from the ISDB! Beyond the great pricing and interest rates, ship upgrades are generally quite difficult to get; the ship production market is incredibly illiquid, where even if you can afford to buy a new ship its often times not possible simply due to a lack of supply. Thankfully BEU has this program so that this does not cause massive problems for players who are transitioning into the intermediate stages of the game! More information can be found at: <a href="https://discord.com/channels/1362291519012212786/1478581081287692469" target="_blank">Discord Link</a></p>
+            
+            <h3 id="singren-grant">Singren Development Grant</h3>
+            <p>If you are interested in building out CHM but can’t because Umbra is full, Singren is just 1 system out from Benten. Because it is a 2 star planet, it does cost a bit more to build on however, so the local government is offering a grant of 10 free HSE (hardened structural elements, required for building on high pressure planets) to anyone who settles on Singren; each building there requires an extra HSE, so the grant effectively makes the first 10 buildings the same price as on a triple green! More information can be found at: <a href="https://discord.com/channels/1362291519012212786/1488859745962954972" target="_blank">Discord Link</a></p>
+            
+            <h3 id="cadia-grant">Cadia Development Grant</h3>
+            <p>If you are interested in getting into mining and metal production, then look no further than Cadia! To help promote building there are grant payments based on building type and amount, with more details available at: <a href="https://discord.com/channels/1362291519012212786/1496156251619594401" target="_blank">Discord Link</a></p>
+            
+            <h3 id="cx-grants">Rolling CX Improvement Grants</h3>
+            <p>Many established players within the Benten region actively work to increase the health of our exchange, and offer grants to anyone willing to make bases producing goods which are in short supply in the CX, with grant sizes usually around 10-20% of the cost of establishing the base. These grants are especially good, because these lacking parts of the market are usually high profit to begin with due to the lack of supply; you can quite literally identify the highest ROI items on the market, and they are very likely the very same ones you can get a grant to make! These grants can be found in benten deals at: <a href="https://discord.com/channels/1362291519012212786/1380163349798719528" target="_blank">Discord Link</a>, however if there is a product which is low in supply in the market which you are interested in producing but there is no grant for at the moment, don’t hesitate to make a post in the market watch channel at <a href="https://discord.com/channels/1362291519012212786/1396917827436544071" target="_blank">Discord Link</a> asking if anyone is willing to sponsor your production; there is a very very high chance you will get a grant, so long as you are producing something on the low end of supply!</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
